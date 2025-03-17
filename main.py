@@ -1,13 +1,21 @@
-# Для подключение библиотеки telebot нужно в google colab добавить: !pip install pyTelegramBotAPI
 from telebot import TeleBot, types
 import json
 
 bot = TeleBot(token='ТОКЕН_ДОСТУПА', parse_mode='html') # создание бота
 
+# Стикеры
+START_STICKER = 'CAACAgIAAxkBAAENjGtn2GGb-45eD87nqDZionFWKfLugwAC_AAD9wLID-JKwmellSruNgQ'  # Замените на ID вашего стикера
+SUCCESS_STICKER = 'CAACAgIAAxkBAAENjG9n2GG83yzE3tgp6gveEZHR-hxQzQAC9wAD9wLID9CX3j-K0TwONgQ'  # Замените на ID вашего стикера
+
 
 # обработчик команды '/start'
 @bot.message_handler(commands=['start'])
 def start_command_handler(message: types.Message):
+    # отправляем стикер
+    bot.send_sticker(
+        chat_id=message.chat.id,
+        sticker=START_STICKER
+    )
     # отправляем ответ на команду '/start'
     bot.send_message(
         chat_id=message.chat.id, # id чата, в который необходимо направить сообщение
@@ -37,6 +45,11 @@ def message_handler(message: types.Message):
     bot.send_message(
         chat_id=message.chat.id,
         text=f'JSON:\n<code>{text}</code>'
+    )
+    # отправляем стикер после успешной обработки JSON
+    bot.send_sticker(
+        chat_id=message.chat.id,
+        sticker=SUCCESS_STICKER
     )
 
 
