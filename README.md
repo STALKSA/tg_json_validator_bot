@@ -15,15 +15,18 @@
 
 Стартовое меню:
 
-![image](https://raw.githubusercontent.com/German-D/tg_json/main/static/menu.png)
+![image](https://github.com/user-attachments/assets/453b8f90-398b-4235-ac33-2c6e40690b31)
+
 
 После отправки JSON c ошибкой:
 
-![image](https://raw.githubusercontent.com/German-D/tg_json/main/static/syntax.png)
+![image](https://github.com/user-attachments/assets/a4bfb585-1ae5-49db-9d90-a344fd670a3e)
+
 
 Пример работы бьютифаера:
 
-![image](https://raw.githubusercontent.com/German-D/tg_json/main/static/beautifaer.png)
+![image](https://github.com/user-attachments/assets/6c6db329-418a-4150-9bd2-1dd48b268c48)
+
 
 
 ## 💻 Технологии
